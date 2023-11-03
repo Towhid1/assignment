@@ -1,8 +1,9 @@
 # Assignment
-Task 1 and 2 done. Here I added how to run it and test it. Both endpoints take GET request.
-Task 1 endpoint : `http://127.0.0.1:8000/coolest_ten`
+Task 1 and 2 done. Here I added how to run it and test it. Both endpoints take GET request. <br>
+Task 1 endpoint : `http://127.0.0.1:8000/coolest_ten` <br>
 Task 2 endpoint : `http://127.0.0.1:8000/predict/2023-12-10`
 In case of prediction endpoint you need to provide date in this format `"YYYY-MM-DD"` example : `2023-12-10`.
+
 
 ## How to run:
 
@@ -29,4 +30,15 @@ In case of prediction endpoint you need to provide date in this format `"YYYY-MM
     api response : {'date': '2023-11-03', 'predicted_temperature': 27.625208333333354, 'unit': '°C'}
 
     >> 2nd task execution_time : 0.005758976936340332 sec
-```
+    ```
+
+
+## If you want to train new model:
+1. Downlaod data :
+   ```bash
+   python download_data.py
+   ```
+2. Run training code :
+    ```bash
+   python train_model.py
+   ```
