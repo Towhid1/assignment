@@ -2,7 +2,6 @@
 Script to train model
 """
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
@@ -53,7 +52,7 @@ def main():
 
     # Evaluate the model on the testing set
     mae = mean_absolute_error(y_test, model.predict(X_test))
-    print(f"Mean Absolute Error: {mae} °C")
+    print(f"Model train and saved : {MODEL_DIR}\nModel Mean Absolute Error: {mae} °C")
 
 
 if __name__ == "__main__":
