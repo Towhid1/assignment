@@ -16,6 +16,8 @@ In case of prediction endpoint you need to provide date in this format `"YYYY-MM
     ```bash
     uvicorn api:app --reload
     ```
+3. Open this link http://127.0.0.1:8000/coolest_ten for coolest 10 city.
+4. Open this link http://127.0.0.1:8000/predict/2023-12-10 for forecast.
 
 ## Test API:
 1. Create a new terminal.
