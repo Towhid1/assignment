@@ -10,7 +10,7 @@ app = FastAPI()
 @app.get("/coolest_ten")
 async def coolest_ten():
     try:
-        result_json = df.to_json(orient="records")
+        result_json = df.set_index("districts")["temperature"].to_dict()
         return {"data": result_json}
     except FileNotFoundError:
         return {"error": "CSV file not found."}
