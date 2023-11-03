@@ -1,5 +1,8 @@
 # Assignment
-Task 1 and 2 done. Here I added how to run it and test it.
+Task 1 and 2 done. Here I added how to run it and test it. Both endpoints take GET request.
+Task 1 endpoint : `http://127.0.0.1:8000/coolest_ten`
+Task 2 endpoint : `http://127.0.0.1:8000/predict/2023-12-10`
+In case of prediction endpoint you need to provide date in this format `"YYYY-MM-DD"` example : `2023-12-10`.
 
 ## How to run:
 
