@@ -27,19 +27,22 @@ def main():
     df = pd.read_csv(FORECAST_TEMP_DIR)
 
     # Convert the 'time' column to datetime type
-    df['time'] = pd.to_datetime(df['time'])
+    df["time"] = pd.to_datetime(df["time"])
 
     # Extracting numerical features from the date (e.g., day of the year)
-    df['day_of_year'] = df['time'].dt.dayofyear
-    df['day_of_week'] = df['time'].dt.day_of_week
-    df['days_in_month'] = df['time'].dt.days_in_month
-    df['month'] = df['time'].dt.month
-    df['year'] = df['time'].dt.year
+    df["day_of_year"] = df["time"].dt.dayofyear
+    df["day_of_week"] = df["time"].dt.day_of_week
+    df["days_in_month"] = df["time"].dt.days_in_month
+    df["month"] = df["time"].dt.month
+    df["year"] = df["time"].dt.year
 
     # Splitting the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(
-        df[['day_of_year', 'day_of_week', 'month', 'days_in_month', 'year']], df['temperature_2m'],
-        test_size=0.2, random_state=42)
+        df[["day_of_year", "day_of_week", "month", "days_in_month", "year"]],
+        df["temperature_2m"],
+        test_size=0.2,
+        random_state=42,
+    )
 
     # Creating and training the RandomForestRegressor model
     model = RandomForestRegressor()
@@ -53,5 +56,5 @@ def main():
     print(f"Mean Absolute Error: {mae} °C")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

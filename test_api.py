@@ -4,7 +4,7 @@ from time import time
 # ============================================
 # Task 1 test
 # ============================================
-BASE_URL = "http://127.0.0.1:8000"  # Replace with the actual address of your FastAPI server
+BASE_URL = "http://127.0.0.1:8000"
 run_n = 10
 start = time()
 try:

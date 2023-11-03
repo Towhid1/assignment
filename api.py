@@ -40,8 +40,12 @@ async def predict_temperature(date_str: str):
         year = input_date.year
 
         # Make a prediction using the loaded model
-        prediction = model.predict([[day_of_year, day_of_week, month, days_in_month, year]])[0]
+        prediction = model.predict(
+            [[day_of_year, day_of_week, month, days_in_month, year]]
+        )[0]
         return {"date": date_str, "predicted_temperature": prediction, "unit": "°C"}
 
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Error processing request: {str(e)}")
+        raise HTTPException(
+            status_code=400, detail=f"Error processing request: {str(e)}"
+        )
